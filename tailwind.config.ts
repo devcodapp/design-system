@@ -6,7 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
+  theme: { 
     extend: {
       colors: {
         'neutral-1000': '#181826',
@@ -119,7 +119,7 @@ const config: Config = {
       fontFamily: {
         'system-font': ['Poppins', 'sans-serif']
       }
-    },
+    }
   },
   plugins: [],
 }
