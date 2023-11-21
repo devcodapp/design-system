@@ -59,8 +59,8 @@ const config: Config = {
         'alternative-100': '#F6ECFC',
 
         'primary-button-neutral-0': '#FFFFFF',
-        'primary-button-primary-600': '#4945FF',
-        'primary-button-primary-500': '#7B79FF',
+        'primary-button-600': '#4945FF',
+        'primary-button-500': '#7B79FF',
 
 
         'dark-neutral-0': '#212134',
