@@ -1,20 +1,34 @@
-/* eslint-disable react/jsx-key */
-import React from "react";
-import {Accordion, AccordionItem} from "@nextui-org/react";
+// components/Accordion.tsx
+import { faCircleChevronDown, faCircleChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState, ReactNode } from 'react';
 
 interface AccordionProps {
-  accordions: { accTitle: string, content: string} [];
+    title: string;
+    content: ReactNode;
 }
-export default function AccordionComp({accordions}:AccordionProps) {
 
+const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <Accordion selectionMode="multiple" variant="shadow">
-      {accordions.map((accordion) => (
-        <AccordionItem title={accordion.accTitle}>
-          {accordion.content}
-        </AccordionItem>
-      ))}
-    </Accordion>
-  );
-}
+    const toggleAccordion = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <div className="border border-gray-600 p-4 mb-4">
+            <div className="flex justify-between items-center">
+                <h2 className="text-xl font-semibold">{title}</h2>
+                <button
+                    className="text-blue-500 focus:outline-none"
+                    onClick={toggleAccordion}
+                >
+                    {isOpen ? <FontAwesomeIcon icon={faCircleChevronUp} /> : <FontAwesomeIcon icon={faCircleChevronDown} />}
+                </button>
+            </div>
+            {isOpen && <div className="mt-4">{content}</div>}
+        </div>
+    );
+};
+
+export default Accordion;

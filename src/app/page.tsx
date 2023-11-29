@@ -1,21 +1,17 @@
 'use client'
 
+import Accordion from "@/components/Accordion";
 import AccordionComp from "@/components/Accordion"
+import App from "@/components/accordionteste";
 import * as React from "react";
 
 export default function Home() {
-  const accordionsControl = [
-    { accTitle: "Titulo 1", content: "Conteúdo 1" },
-    { accTitle: "Titulo 2", content: "Conteúdo 2" },
-    { accTitle: "Titulo 3", content: "Conteúdo 3" },
-    { accTitle: "Titulo 4", content: "Conteúdo 4" },
-    { accTitle: "Titulo 5", content: "Conteúdo 5" },
-  ];
-  return (
-    <div>
-      <div>
-        <AccordionComp accordions={accordionsControl}/>
-      </div>
-    </div>
-  )
+
+    return (
+        <div>
+            <App />
+            <h1>pagina inicial</h1>
+            <Accordion title="Titulo 1" content="Conteudo teste"></Accordion>
+        </div>
+    )
 }
