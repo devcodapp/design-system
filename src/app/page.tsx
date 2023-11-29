@@ -1,14 +1,13 @@
-'use client'
+import { Text } from '@/components/Text'
 
-import { Button } from '@/components/Button'
+
 
 export default function Home() {
   return (
-    <div className='flex flex-col gap-3'>
-      <Button className='bg-primary-700' onClick={() => alert('Teste')}>Salvar</Button>
-      <Button>Fechar</Button>
-      <Button>Cancelar</Button>
-      <Button className='bg-warning-500'>Continuar</Button>
-    </div>
+    <div className="flex justify-center items-center h-screen bg-zinc-900">
+  <Text size="xl" className='text-center text-dark-alternative-600'>
+    Seu texto aqui
+  </Text>
+</div>
   )
 }
