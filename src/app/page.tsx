@@ -1,14 +1,21 @@
 'use client'
 
-import { Button } from '@/components/Button'
+import AccordionComp from "@/components/Accordion"
+import * as React from "react";
 
 export default function Home() {
+  const accordionsControl = [
+    { accTitle: "Titulo 1", content: "Conteúdo 1" },
+    { accTitle: "Titulo 2", content: "Conteúdo 2" },
+    { accTitle: "Titulo 3", content: "Conteúdo 3" },
+    { accTitle: "Titulo 4", content: "Conteúdo 4" },
+    { accTitle: "Titulo 5", content: "Conteúdo 5" },
+  ];
   return (
-    <div className='flex flex-col gap-3'>
-      <Button className='bg-primary-700' onClick={() => alert('Teste')}>Salvar</Button>
-      <Button>Fechar</Button>
-      <Button>Cancelar</Button>
-      <Button className='bg-warning-500'>Continuar</Button>
+    <div>
+      <div>
+        <AccordionComp accordions={accordionsControl}/>
+      </div>
     </div>
   )
 }
