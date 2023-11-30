@@ -1,14 +1,29 @@
 'use client'
 
-import { Button } from '@/components/Button'
+import React from "react";
+import { Button, useDisclosure} from "@nextui-org/react";
+import { ModalAlert } from "@/components/Alert-Modal";
+import { AlertCircle } from "lucide-react";
+
 
 export default function Home() {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  
   return (
-    <div className='flex flex-col gap-3'>
-      <Button className='bg-primary-700' onClick={() => alert('Teste')}>Salvar</Button>
-      <Button>Fechar</Button>
-      <Button>Cancelar</Button>
-      <Button className='bg-warning-500'>Continuar</Button>
-    </div>
-  )
+    <>
+        <Button onPress={onOpen}>Open Modal</Button>
+        <ModalAlert.Root isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalAlert.Content>
+        <ModalAlert.Header>
+            Confirmação
+        </ModalAlert.Header>
+            <AlertCircle className="mt-2 mb-0 self-center" color="#B72B1A" size={28}/>
+            <span className="font-semibold text-center m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, beatae?</span>
+        <ModalAlert.Footer>
+            Botoes
+        </ModalAlert.Footer>
+        </ModalAlert.Content>
+        </ModalAlert.Root>
+    </>
+  );
 }
