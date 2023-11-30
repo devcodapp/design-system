@@ -1,4 +1,5 @@
-'use client'
+import { Text } from '@/components/Text'
+
 
 import * as React from "react";
 import Header from "@/components/Header";
