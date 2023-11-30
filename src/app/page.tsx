@@ -1,4 +1,5 @@
-'use client'
+import { Text } from '@/components/Text'
+
 
 import React from "react";
 import { Button, useDisclosure} from "@nextui-org/react";
