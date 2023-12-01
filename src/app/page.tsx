@@ -1,8 +1,6 @@
-//page.tsx
-
 'use client'
 
-import useAlert from '@/components/useAlert'
+import useAlert from '@/components/Alert/useAlert'
 
 export default function Home() {
     const { alerts, createToast }= useAlert()
