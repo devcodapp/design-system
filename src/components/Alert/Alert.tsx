@@ -1,4 +1,3 @@
-// Alert.tsx
 import React, { ReactNode, useState, useEffect } from 'react';
 import { CheckCircle2, AlertCircleIcon, Info, X } from 'lucide-react';
 import { Transition } from '@headlessui/react';
@@ -9,16 +8,17 @@ interface AlertProps {
   size?: 'small' | 'large';
   children: ReactNode;
   onClose: () => void;
+  link?: string;
 }
 
-export default function Alert({ title, size = 'small', variant = 'info', children, onClose }: AlertProps) {
+export default function Alert({ title, size = 'small', variant = 'info', children, onClose, link }: AlertProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setVisible(false);
       onClose && onClose();
-    }, 5000);
+    }, 7000);
 
     return () => clearTimeout(timeout);
   }, [onClose]);
@@ -41,11 +41,11 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
     <Transition
       appear
       show={visible}
-      enter="transition ease-out duration-200 transform"
+      enter="transition ease-out duration-400 transform"
       enterFrom="opacity-0 translate-x-1 translate-y-0"
       enterTo="opacity-100 translate-x-0 translate-y-0"
-      leave="transition ease-out duration-200 transform"
-      leaveFrom="opacity-100 translate-x-0 translate-y-0"
+      leave="transition ease-out duration-400 transform"
+      leaveFrom="opacity-100 translate-x-1 translate-y-0"
       leaveTo="opacity-0 translate-x-2 translate-y-0"
     >
       <div className={`${classVariant[variant]} ${baseStyles} ${sizeStyles[size]}`}>
@@ -63,6 +63,11 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
         <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2' : 'flex mr-2'}`}>
           {title && <p className="font-bold text-sm mb-1 mr-1">{title}</p>}
           {children}
+          {link && (
+            <a href={link} className="text-blue-500 underline ml-2" target="_blank" rel="noopener noreferrer">
+              {link}
+            </a>
+          )}
         </div>
         <button
           onClick={() => {

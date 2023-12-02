@@ -1,14 +1,14 @@
-// useAlert.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Alert from './Alert';
 import { Transition } from '@headlessui/react';
 
 type Toast = {
   text: string;
-  variant?: "success" | "danger" | "warning" | "info";
-  size?: "small" | "large";
+  variant?: 'success' | 'danger' | 'warning' | 'info';
+  size?: 'small' | 'large';
   title?: string;
   onClose: () => void;
+  link?: string;
 };
 
 export default function useAlert() {
@@ -16,33 +16,43 @@ export default function useAlert() {
 
   const createToast = (options: Toast): void => {
     setAlerts([...list, options]);
-
-    setTimeout(() => {
-      closeAlert(options.onClose);
-    }, 5000);
   };
 
-  const closeAlert = (onClose: () => void): void => {
-    setAlerts((alerts) => alerts.slice(1));
-    onClose();
+  const closeAlert = (index: number): void => {
+    setAlerts((alerts) => {
+      const updatedAlerts = [...alerts];
+      updatedAlerts.splice(index, 1);
+      return updatedAlerts;
+    });
   };
 
   return {
     alerts: (
       <div className="absolute top-1 right-2">
-            <div>
-              {list.map((t, index) => (
-                <Alert
-                  key={index}
-                  variant={t.variant}
-                  size={t.size}
-                  title={t.title}
-                  onClose={() => closeAlert(t.onClose)}
-                >
-                  {t.text}
-                </Alert>
-              ))}
-            </div>
+        <div>
+          {list.map((t, index) => (
+            <Transition
+              key={index}
+              show={list[index] ? true : false}
+              enter="transition ease-out duration-400 transform"
+              enterFrom="opacity-0 translate-x-1 translate-y-0"
+              enterTo="opacity-100 translate-x-0 translate-y-0"
+              leave="transition ease-out duration-400 transform"
+              leaveFrom="opacity-100 translate-x-1 translate-y-0"
+              leaveTo="opacity-0 translate-x-2 translate-y-0"
+            >
+              <Alert
+                variant={t.variant}
+                size={t.size}
+                title={t.title}
+                onClose={() => closeAlert(index)}
+                link={t.link}
+              >
+                {t.text}
+              </Alert>
+            </Transition>
+          ))}
+        </div>
       </div>
     ),
     createToast,

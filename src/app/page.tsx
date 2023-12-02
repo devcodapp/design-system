@@ -7,11 +7,12 @@ export default function Home() {
 
     const addAlert = () => {
         createToast({
-            title: "Titulo da Alerta:",
+            title: "Warning alert:",
             text:"Alert with title and longer description.",
-            variant: "success",
+            variant: "warning",
             onClose: () => {},
-            size: "small"
+            size: "small",
+            link: "Saiba Mais"
         }
         )
     }
