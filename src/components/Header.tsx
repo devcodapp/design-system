@@ -22,7 +22,7 @@ export default function Header ({title,subtitle,back,primaryActionBtn,secondaryA
             {secondaryActionBtn? secondaryActionBtn: null}
         </div>
     </div>
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center gap-4">
         {terciaryActionBtn? terciaryActionBtn: null}
         {primaryActionBtn? primaryActionBtn: null}
     </div>
