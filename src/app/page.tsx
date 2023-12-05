@@ -1,29 +1,27 @@
 'use client'
 
-import React from "react";
-import { Button, useDisclosure} from "@nextui-org/react";
-import { ModalAlert } from "@/components/Alert-Modal";
-import { AlertCircle } from "lucide-react";
-import { Text } from "@/components/Text";
+import useAlert from '@/components/Alert/useAlert'
 
 export default function Home() {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+    const { alerts, createToast }= useAlert()
 
+    const addAlert = () => {
+        createToast({
+            title: "Warning alert:",
+            text:"Alert with title and longer description.",
+            variant: "warning",
+            onClose: () => {},
+            size: "small",
+            link: 'https://www.google.com/',
+            textLink: 'Saiba Mais',
+
+        }
+        )
+    }
   return (
-    <>
-        <Button onPress={onOpen}>Open Modal</Button>
-        <ModalAlert.Root isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalAlert.Content>
-        <ModalAlert.Header>
-            <Text className="text-black" size="lg">Confirmação</Text>
-        </ModalAlert.Header>
-            <AlertCircle className="mt-2 mb-0 self-center" color="#B72B1A" size={28}/>
-            <Text className="font-semibold text-red-500 text-center m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, beatae?</Text>
-        <ModalAlert.Footer>
-            Botoes
-        </ModalAlert.Footer>
-        </ModalAlert.Content>
-        </ModalAlert.Root>
-    </>
-  );
+    <div className="flex justify-center items-center h-screen bg-zinc-900">
+  <button onClick={addAlert} className="bg-primary-600 text-white px-6 py-2 rounded-md">Adicionar Alert</button>
+  {alerts}
+  </div>
+  )
 }
