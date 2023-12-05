@@ -9,6 +9,7 @@ type Toast = {
   title?: string;
   onClose: () => void;
   link?: string;
+  textLink: string
 };
 
 export default function useAlert() {
@@ -47,6 +48,7 @@ export default function useAlert() {
                 title={t.title}
                 onClose={() => closeAlert(index)}
                 link={t.link}
+                textLink={t.textLink}
               >
                 {t.text}
               </Alert>

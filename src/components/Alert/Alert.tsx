@@ -9,9 +9,10 @@ interface AlertProps {
   children: ReactNode;
   onClose: () => void;
   link?: string;
+  textLink: string
 }
 
-export default function Alert({ title, size = 'small', variant = 'info', children, onClose, link }: AlertProps) {
+export default function Alert({ title, size = 'small', variant = 'info', children, onClose, link, textLink }: AlertProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -63,11 +64,7 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
         <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2' : 'flex mr-2'}`}>
           {title && <p className="font-bold text-sm mb-1 mr-1">{title}</p>}
           {children}
-          {link && (
-            <a href={link} className="text-blue-500 underline ml-2" target="_blank" rel="noopener noreferrer">
-              {link}
-            </a>
-          )}
+          {link && ( <a href={link} className="text-blue-500 underline ml-2" target="_blank" rel="noopener noreferrer"> {textLink || link} </a> )}
         </div>
         <button
           onClick={() => {

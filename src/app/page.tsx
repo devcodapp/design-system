@@ -12,7 +12,9 @@ export default function Home() {
             variant: "warning",
             onClose: () => {},
             size: "small",
-            link: "Saiba Mais"
+            link: 'https://www.google.com/',
+            textLink: 'Saiba Mais',
+
         }
         )
     }
