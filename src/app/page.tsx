@@ -1,3 +1,6 @@
+//page.tsx
+
+
 'use client'
 
 import React from "react";
@@ -12,16 +15,31 @@ export default function Home() {
   return (
     <>
         <Button onPress={onOpen}>Open Modal</Button>
-        <Dialog.Root size="3xl" isOpen={isOpen} onOpenChange={onOpenChange}>
-        <Dialog.Content>
-        <Dialog.Header>
-            <Text size="lg">Titulo do Modal</Text>
-        </Dialog.Header>
-           <Text className="m-6 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, autem distinctio quos commodi natus, error alias fugiat rerum nisi incidunt perferendis labore deserunt modi velit consequatur inventore eligendi nam ex!</Text>
-        <Dialog.Footer>
-            <Text size="md">Botões</Text>
-        </Dialog.Footer>
-        </Dialog.Content>
+        <Dialog.Root scrollBehavior={"inside"} isOpen={isOpen} onOpenChange={onOpenChange}>
+            <Dialog.Content>
+                <Dialog.Header  onClose={onOpenChange}>
+                    <Text size="md" className="font-bold">Titulo do Modal</Text>
+                </Dialog.Header>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+                <Dialog.Footer>
+                    <Text size="md" className="font-semibold">Botões</Text>
+                </Dialog.Footer>
+            </Dialog.Content>
         </Dialog.Root>
     </>
   );
