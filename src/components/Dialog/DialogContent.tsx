@@ -8,7 +8,7 @@ interface DialogContentProps extends ModalBodyProps{
 
 export function DialogContent({children, className, ...props}: DialogContentProps) { 
     return (
-        <DialogBodyNextUI className={twMerge("py-0 px-0 flex flex-1 flex-col gap-3 ", className)} {...props}>
+        <DialogBodyNextUI className={twMerge("gap-3", className)} {...props}>
             {children}
         </DialogBodyNextUI>
     )

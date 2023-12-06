@@ -1,6 +1,3 @@
-//page.tsx
-
-
 'use client'
 
 import React from "react";
@@ -16,10 +13,10 @@ export default function Home() {
     <>
         <Button onPress={onOpen}>Open Modal</Button>
         <Dialog.Root scrollBehavior={"inside"} isOpen={isOpen} onOpenChange={onOpenChange}>
-            <Dialog.Content>
-                <Dialog.Header  onClose={onOpenChange}>
+                <Dialog.Header onClose={onOpenChange}>
                     <Text size="md" className="font-bold">Titulo do Modal</Text>
                 </Dialog.Header>
+            <Dialog.Content>
                     <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
                     <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
                     <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
@@ -36,10 +33,10 @@ export default function Home() {
                     <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
                     <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
                     <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
+            </Dialog.Content>
                 <Dialog.Footer>
                     <Text size="md" className="font-semibold">Botões</Text>
                 </Dialog.Footer>
-            </Dialog.Content>
         </Dialog.Root>
     </>
   );
