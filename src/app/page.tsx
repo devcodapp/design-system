@@ -6,9 +6,7 @@ import { Dialog } from "@/components/Dialog";
 import { Text } from "@/components/Text";
 
 export default function Home() {
-
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
   return (
     <>
         <Button onPress={onOpen}>Open Modal</Button>
