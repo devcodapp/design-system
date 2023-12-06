@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
         <Button onPress={onOpen}>Open Modal</Button>
-        <Dialog.Root scrollBehavior={"inside"} isOpen={isOpen} onOpenChange={onOpenChange}>
+        <Dialog.Root isOpen={isOpen} onOpenChange={onOpenChange}>
                 <Dialog.Header onClose={onOpenChange}>
                     <Text size="md" className="font-bold">Titulo do Modal</Text>
                 </Dialog.Header>
