@@ -4,7 +4,7 @@ import { AlertProps } from "./Alert"
 
 
 export default {
-    title: "Alert",
+    title: "Components/Alert",
     component: Alert,
     args: {
         title: "Warning alert:",

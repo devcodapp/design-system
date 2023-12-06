@@ -6,9 +6,9 @@ export interface ModalFooterProps extends ModalFooterPropsNextUI {
     children: ReactNode;
 }
 
-export default function ModalFooter({className , children , ...props}: ModalFooterProps) {
+export function ModalFooter({className , children , ...props}: ModalFooterProps) {
     return(
-        <ModalFooterNextUI className={twMerge("justify-between border-solid border-t border-gray-200", className)} {...props}>
+        <ModalFooterNextUI className={twMerge("justify-between border-solid border-t border-neutral-200", className)} {...props}>
             {children}
         </ModalFooterNextUI>
     )

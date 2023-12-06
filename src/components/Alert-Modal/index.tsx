@@ -1,7 +1,7 @@
-import { ModalComponent } from "./Modal";
-import { ModalContent } from "./ModalContent";
-import ModalFooter from "./ModalFooter";
-import ModalHeader from "./ModalHeader";
+import { ModalComponent, ModalProps } from "./Modal";
+import { ModalContent, ModalContentProps } from "./ModalContent";
+import { ModalFooter, ModalFooterProps }  from "./ModalFooter";
+import { ModalHeader, ModalHeaderProps } from "./ModalHeader";
 
 
 export const ModalAlert = {
