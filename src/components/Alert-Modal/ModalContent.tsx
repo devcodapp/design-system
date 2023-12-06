@@ -2,7 +2,7 @@ import { ModalBody as ModalBodyNextUI, ModalBodyProps } from "@nextui-org/react"
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface ModalContentProps extends ModalBodyProps {
+export interface ModalContentProps extends ModalBodyProps {
     children: ReactNode
 }
 

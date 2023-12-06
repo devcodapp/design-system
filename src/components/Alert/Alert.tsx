@@ -2,14 +2,14 @@ import React, { ReactNode, useState, useEffect } from 'react';
 import { CheckCircle2, AlertCircleIcon, Info, X } from 'lucide-react';
 import { Transition } from '@headlessui/react';
 
-interface AlertProps {
+export interface AlertProps {
   title?: string;
   variant?: 'success' | 'danger' | 'warning' | 'info';
   size?: 'small' | 'large';
   children: ReactNode;
   onClose: () => void;
   link?: string;
-  textLink: string
+  textLink?: string
 }
 
 export default function Alert({ title, size = 'small', variant = 'info', children, onClose, link, textLink }: AlertProps) {
@@ -61,7 +61,7 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
             <Info size={16} className="text-primary-600" />
           )}
         </div>
-        <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2' : 'flex mr-2'}`}>
+        <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2 justify-start text-start' : 'flex  mr-2'}`}>
           {title && <p className="font-bold text-sm mb-1 mr-1">{title}</p>}
           {children}
           {link && ( <a href={link} className="text-blue-500 underline ml-2" target="_blank" rel="noopener noreferrer"> {textLink || link} </a> )}

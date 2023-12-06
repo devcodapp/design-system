@@ -9,14 +9,19 @@ export default {
     args: {
         children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
         size: "md",
-        className: 'text-white'
+        className: ''
     },
+    parameters: { layout: 'centered', backgrounds: {
+        values: [
+          { name: 'neutral', value: '#32324D' },
+          { name: 'white', value: '#fff' },
+        ], 
+    },
+    }, 
     decorators: [
         (Story) => { 
             return (
-                <div className="flex justify-center items-center h-screen max-w-full text-center">
-                    {Story()}
-                </div>
+                Story()
             )
         }
     ]

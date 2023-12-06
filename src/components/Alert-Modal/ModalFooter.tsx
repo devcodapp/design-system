@@ -2,7 +2,7 @@ import { ModalFooter as ModalFooterNextUI, ModalFooterProps as ModalFooterPropsN
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface ModalFooterProps extends ModalFooterPropsNextUI {
+export interface ModalFooterProps extends ModalFooterPropsNextUI {
     children: ReactNode;
 }
 

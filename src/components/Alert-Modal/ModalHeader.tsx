@@ -2,7 +2,7 @@ import { ModalHeader as ModalHeaderNextUI, ModalHeaderProps as ModalHeaderPropsN
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface ModalHeaderProps extends ModalHeaderPropsNextUI{
+export interface ModalHeaderProps extends ModalHeaderPropsNextUI{
     children: ReactNode
 }
 

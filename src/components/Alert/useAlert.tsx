@@ -3,13 +3,13 @@ import Alert from './Alert';
 import { Transition } from '@headlessui/react';
 
 type Toast = {
-  text: string;
+  children: string;
   variant?: 'success' | 'danger' | 'warning' | 'info';
   size?: 'small' | 'large';
   title?: string;
   onClose: () => void;
   link?: string;
-  textLink: string
+  textLink?: string
 };
 
 export default function useAlert() {
@@ -50,7 +50,7 @@ export default function useAlert() {
                 link={t.link}
                 textLink={t.textLink}
               >
-                {t.text}
+                {t.children}
               </Alert>
             </Transition>
           ))}
