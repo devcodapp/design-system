@@ -8,7 +8,7 @@ interface DialogProps extends DialogPropsNextUI {
 
 export function DialogComponent({hideCloseButton, children , className ,...props}:  DialogProps, ){
     return (
-        <DialogNextUI {...props} scrollBehavior="inside" hideCloseButton={hideCloseButton ?? true} className={twMerge("rounded justify-center max-w-[52rem] max-h-[43rem]", className)}>
+        <DialogNextUI {...props} scrollBehavior="inside" hideCloseButton={hideCloseButton ?? true} className={twMerge("rounded justify-center max-w-[52rem] max-h-[80vh]", className)}>
             <ModalContent className="">
                 {children}
             </ModalContent>
