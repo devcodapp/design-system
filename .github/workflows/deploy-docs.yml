@@ -3,7 +3,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - feature/storybook
+      - feature/storybook  //PRECISA MUDAR PRA BRANCH *main*
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
+      - run: npm run build-storybook
 
       - name: Deploy storybook
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static

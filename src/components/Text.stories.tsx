@@ -11,9 +11,6 @@ export default {
         children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
         size: "md",
         className: 'text-white',
-        style: {
-            background: '#32324D' // Defina a cor de fundo desejada aqui
-        }
     },
     parameters: { layout: 'centered'}, 
     decorators: [
