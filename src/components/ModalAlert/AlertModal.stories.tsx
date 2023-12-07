@@ -9,6 +9,7 @@ import { ModalProps } from "./Modal";
 export default {
     title: 'Components/Modal Alert',
     component: ModalAlert,
+    tags: ['autodocs'],
     args: {
         size: 'md',
         hideCloseButton: false,

@@ -7,6 +7,7 @@ import  useAlert  from "./useAlert"
 export default {
     title: "Components/Alert",
     component: Alert,
+    tags: ['autodocs'],
     args: {
             title: "Warning alert:",
             children:"Alert with title and longer description Alert with title and longer description Alert with title and longer description Alert with title and longer description.",

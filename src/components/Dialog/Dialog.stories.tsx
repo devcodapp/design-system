@@ -11,6 +11,7 @@ export default {
         hideCloseButton: false,
         backdrop: 'opaque',
     },
+    tags: ['autodocs'],
     argTypes: {
         size: {
             control: { type: 'select' },
