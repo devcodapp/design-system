@@ -19,7 +19,7 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
     const timeout = setTimeout(() => {
       setVisible(false);
       onClose && onClose();
-    }, 17000);
+    }, 5000);
 
     return () => clearTimeout(timeout);
   }, [onClose]);
@@ -33,7 +33,7 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
 
   const classVariant = {
     success: 'bg-success-100 border-success-200 ',
-    info: 'bg-primary-400 border-primary-300',
+    info: 'bg-primary-300 border-primary-400',
     danger: 'bg-danger-100 border-danger-200 ',
     warning: 'bg-warning-100 border-warning-200 ',
   };
@@ -62,8 +62,8 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
           )}
         </div>
         <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2 justify-start text-start' : 'flex mr-2 text-center'}`}>
-          {title && <p className="font-bold text-sm mb-1 mr-1">{title}</p>}
-          {children && <p className='mr-2'>{children}</p>}
+          {title && <p className="font-bold text-neutral-800 text-sm mb-1 mr-1">{title}</p>}
+          {children && <p className='mr-2 text-neutral-800'>{children}</p>}
           {link && ( 
           <>
           <a href={link} className="text-primary-700 flex justify-normal items-center gap-1 self-baseline" target="_blank" rel="noopener noreferrer"> 

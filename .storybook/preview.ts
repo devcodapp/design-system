@@ -12,6 +12,9 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+        theme: themes.dark
+    }
     },
   }
 

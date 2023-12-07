@@ -8,7 +8,7 @@ export default {
     title: "Components/Alert",
     component: Alert,
     args: {
-        title: "Warning alert:",
+            title: "Warning alert:",
             children:"Alert with title and longer description Alert with title and longer description Alert with title and longer description Alert with title and longer description.",
             variant: "warning",
             onClose: () => {},
@@ -16,19 +16,13 @@ export default {
             link: 'https://www.google.com/',
             textLink: 'Saiba Mais',
     },
-    parameters: { layout: 'centered', backgrounds: {
-        values: [
-          { name: 'neutral', value: '#32324D' },
-          { name: 'white', value: '#fff' },
-        ], 
-    },
-    }, 
+    parameters: { layout: 'centered'}, 
 } as Meta<AlertProps>   
 
-export const Default: StoryObj<AlertProps> = {}
+export const Alert_: StoryObj<AlertProps> = {}
 
 
-export const Home = () => {
+export const Action = () => {
     const { alerts, createToast }= useAlert()
 
     const addAlert = () => {

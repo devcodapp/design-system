@@ -9,15 +9,12 @@ export default {
     args: {
         children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
         size: "md",
-        className: ''
+        className: 'text-white',
+        style: {
+            background: '#32324D' // Defina a cor de fundo desejada aqui
+        }
     },
-    parameters: { layout: 'centered', backgrounds: {
-        values: [
-          { name: 'neutral', value: '#32324D' },
-          { name: 'white', value: '#fff' },
-        ], 
-    },
-    }, 
+    parameters: { layout: 'centered'}, 
     decorators: [
         (Story) => { 
             return (
@@ -27,4 +24,4 @@ export default {
     ]
 } as Meta<TextProps>   
 
-export const Default: StoryObj<TextProps> = {}
+export const Text_: StoryObj<TextProps> = {}
