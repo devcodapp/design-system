@@ -1,7 +1,7 @@
 import  Alert  from "./Alert";
 import { Meta, StoryObj } from "@storybook/react"
 import { AlertProps } from "./Alert"
-import { useAlert } from 
+import  useAlert  from "./useAlert"
 
 
 export default {
@@ -23,16 +23,29 @@ export default {
         ], 
     },
     }, 
-    decorators: [
-        (Story) => { 
-              return (
-                <div className="flex justify-center items-center h-screen bg-zinc-900">
-                    <button onClick={addAlert} className="bg-primary-600 text-white px-6 py-2 rounded-md">Adicionar Alert</button>
-                    {Story()}
-                </div>
-              )
-            },
-    ]
 } as Meta<AlertProps>   
 
 export const Default: StoryObj<AlertProps> = {}
+
+
+export const Home = () => {
+    const { alerts, createToast }= useAlert()
+
+    const addAlert = () => {
+        createToast({
+            title: "Warning alert:",
+            children:"Alert with title and longer description.",
+            variant: "success",
+            onClose: () => {},
+            size: "small",
+            link: 'https://www.google.com/',
+            textLink: 'Saiba Mais',
+        }
+        )
+    }
+  return (
+        <button onClick={addAlert} className="bg-primary-600 text-white px-6 py-2 rounded-md">Adicionar Alert
+        {alerts}
+        </button>
+  )
+}

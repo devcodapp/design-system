@@ -61,7 +61,7 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
             <Info size={16} className="text-primary-600" />
           )}
         </div>
-        <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2 justify-start text-start' : 'flex mr-2 text-center justify-center'}`}>
+        <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2 justify-start text-start' : 'flex mr-2 text-center'}`}>
           {title && <p className="font-bold text-sm mb-1 mr-1">{title}</p>}
           {children && <p className='mr-2'>{children}</p>}
           {link && ( 
