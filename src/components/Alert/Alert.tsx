@@ -24,11 +24,11 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
     return () => clearTimeout(timeout);
   }, [onClose]);
 
-  const baseStyles = 'max-w-[31.25rem] p-5 rounded shadow border border-solid m-5 flex gap-3.5 items-start relative';
+  const baseStyles = 'p-5 rounded shadow border border-solid m-5 flex gap-3.5 items-start relative';
 
   const sizeStyles = {
-    small: 'max-h-16 flex',
-    large: 'min-h-32',
+    small: 'min-h-16 min-w-[31.25rem]',
+    large: 'min-h-32 max-w-[31.25rem]',
   };
 
   const classVariant = {
@@ -61,7 +61,7 @@ export default function Alert({ title, size = 'small', variant = 'info', childre
             <Info size={16} className="text-primary-600" />
           )}
         </div>
-        <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2 justify-start text-start' : 'flex mr-2'}`}>
+        <div className={`text-sm ${sizeStyles[size]} ${size === 'large' ? 'mr-2 justify-start text-start' : 'flex mr-2 text-center justify-center'}`}>
           {title && <p className="font-bold text-sm mb-1 mr-1">{title}</p>}
           {children && <p className='mr-2'>{children}</p>}
           {link && ( 

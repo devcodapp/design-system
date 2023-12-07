@@ -5,7 +5,7 @@ import { AlertCircle } from "lucide-react";
 
 
 export default {
-    title: 'Components/Modal/Alert',
+    title: 'Components/Alert-Modal',
     component: ModalAlert,
     args: {
         hideCloseButton: true,

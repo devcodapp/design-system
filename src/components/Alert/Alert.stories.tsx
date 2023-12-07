@@ -1,6 +1,7 @@
 import  Alert  from "./Alert";
 import { Meta, StoryObj } from "@storybook/react"
 import { AlertProps } from "./Alert"
+import { useAlert } from 
 
 
 export default {
@@ -24,10 +25,13 @@ export default {
     }, 
     decorators: [
         (Story) => { 
-            return (
-                Story()
-            )
-        }
+              return (
+                <div className="flex justify-center items-center h-screen bg-zinc-900">
+                    <button onClick={addAlert} className="bg-primary-600 text-white px-6 py-2 rounded-md">Adicionar Alert</button>
+                    {Story()}
+                </div>
+              )
+            },
     ]
 } as Meta<AlertProps>   
 
