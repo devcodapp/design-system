@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "deploy-storybook": "storybook-to-ghpages",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -30,6 +31,7 @@
     "@storybook/blocks": "^7.6.3",
     "@storybook/nextjs": "^7.6.3",
     "@storybook/react": "^7.6.3",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/test": "^7.6.3",
     "@types/node": "^20",
     "@types/react": "^18.2.38",
