@@ -1,29 +1,33 @@
-import type { Config } from 'tailwindcss'
-const {nextui} = require("@nextui-org/react");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-        colors: {
-          'neutral-1000': '#181826',
-          'neutral-900': '#212134',
-          'neutral-800': '#32324D',
-          'neutral-700': '#4A4A6A',
-          'neutral-600': '#666687',
-          'neutral-500': '#8E8EA9',
-          'neutral-400': '#A5A5BA',
-          'neutral-300': '#C0C0CF',
-          'neutral-200': '#DCDCE4',
-          'neutral-150': '#EAEAEF',
-          'neutral-100': '#F6F6F9',
-          'neutral-0': '#FFFFFF',
+      screens: {
+              xs: '320px',
+              sm: '520px',
+              md: '744px',
+              lg: '966px',
+              xl: '1366px',
+            },
+      colors: {
+        'neutral-1000': '#181826',
+        'neutral-900': '#212134',
+        'neutral-800': '#32324D',
+        'neutral-700': '#4A4A6A',
+        'neutral-600': '#666687',
+        'neutral-500': '#8E8EA9',
+        'neutral-400': '#A5A5BA',
+        'neutral-300': '#C0C0CF',
+        'neutral-200': '#DCDCE4',
+        'neutral-150': '#EAEAEF',
+        'neutral-100': '#F6F6F9',
+        'neutral-0': '#FFFFFF',
 
           'primary-700': '#271FE0',
           'primary-600': '#4945FF',
@@ -124,6 +128,19 @@ module.exports = {
         }
       },
   },
-  darkMode: "class",
-  plugins: [nextui()],
-};
+  plugins: [],
+}
+
+
+
+// import type { Config } from 'tailwindcss'
+
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   content: [
+    
+
+//   ],
+
+// }
+// export default config
