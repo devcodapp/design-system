@@ -1,43 +1,15 @@
-'use client'
-
-import React from "react";
-import { Button, useDisclosure} from "@nextui-org/react";
-import { Dialog } from "@/components/Dialog";
-import { Text } from "@/components/Text";
+import { AvatarComponent } from "@/components/Avatar";
 
 export default function Home() {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
   return (
     <>
-        <Button onPress={onOpen}>Open Modal</Button>
-        <Dialog.Root isOpen={isOpen} onOpenChange={onOpenChange}>
-                <Dialog.Header onClose={onOpenChange}>
-                    <Text size="md" className="font-bold">Titulo do Modal</Text>
-                </Dialog.Header>
-            <Dialog.Content>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-                    <Text size="lg" className="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </Text>
-            </Dialog.Content>
-                <Dialog.Footer>
-                    <button className="flex items-center gap-1 body-semi inline-flex items-center justify-center rounded px-4 py-3 transition-all duration-300 focus:border-2 focus:outline-none focus:ring-2 focus:ring-primary-700 focus:ring-primary-700 focus:dark:ring-dark-primary-700 focus:dark:ring-dark-primary-700 disabled:border-neutral-200 disabled:bg-neutral-150 disabled:text-neutral-600
-                    text-neutral-0 bg-primary-700 hover:bg-primary-600 dark:bg-dark-primary-600 hover:dark:bg-dark-primary-700 dark:border-transparent">Botões</button>
-
-                </Dialog.Footer>
-        </Dialog.Root>
+    <AvatarComponent.Group max={5} total={4} >
+      <AvatarComponent.Avatar className="bg-neutral-500" isFocusable={false} />
+      <AvatarComponent.Avatar src="https://github.com/bezerra-lucas.png"  />
+      <AvatarComponent.Avatar src="https://github.com/Eduardo-BarrosoS.png"  />
+      <AvatarComponent.Avatar src="https://github.com/Anderson22-dev.png"  />
+      <AvatarComponent.Avatar src="https://github.com/andrebellico.png"  />
+    </AvatarComponent.Group>
     </>
-  );
+  )
 }
