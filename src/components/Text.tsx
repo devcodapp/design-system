@@ -1,7 +1,7 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface TextProps {
+export interface TextProps {
   children: React.ReactNode;
   className?: string;
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';

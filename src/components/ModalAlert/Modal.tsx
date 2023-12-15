@@ -2,7 +2,7 @@ import { ModalContent, Modal as ModalNextUI, ModalProps as ModalPropsNextUI } fr
 import { ReactNode } from "react";
 import { twMerge } from 'tailwind-merge';
 
-interface ModalProps extends ModalPropsNextUI {
+export interface ModalProps extends ModalPropsNextUI {
     children: ReactNode
 }
 
