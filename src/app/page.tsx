@@ -1,12 +1,6 @@
-'use client'
-
-import React from "react";
-import { Button, useDisclosure} from "@nextui-org/react";
-import { Dialog } from "@/components/Dialog";
-import { Text } from "@/components/Text";
+import { AvatarComponent } from "@/components/Avatar";
 
 export default function Home() {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
   return (
     <>
         <Button onPress={onOpen}>Open Modal</Button>
@@ -32,4 +26,3 @@ export default function Home() {
         </Dialog.Root>
     </>
   );
-}
