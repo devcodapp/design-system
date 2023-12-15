@@ -11,8 +11,6 @@ export default function Home() {
                 secondaryActionBtn ={<button className="bg-white h-min">Edit</button>} 
                 tertiaryActionBtn={<button className="bg-white h-min">Cancel</button>} 
             />
-            <h1>pagina inicial</h1>
-
         </div>
     )
 }
